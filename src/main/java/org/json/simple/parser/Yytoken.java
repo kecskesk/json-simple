@@ -52,6 +52,9 @@ public class Yytoken {
 		case TYPE_EOF:
 			sb.append("END OF FILE");
 			break;
+		default:
+			// if there is a case we haven't thought of, the applications should fail 
+			throw new RuntimeException("unidentified type:" + type);
 		}
 		return sb.toString();
 	}
